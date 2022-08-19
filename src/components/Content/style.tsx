@@ -99,24 +99,35 @@ export const DivContentColClients = styled.div`
   flex-direction: row;
 `;
 
-export const BtnEdit = styled.a`
+export const LinkEdit = styled.a`
+  
+`
+export const LinkDel = styled.a`
+  
+`
+
+export const BtnEdit = styled.button`
+  background: transparent;
+  border: 0;
   color: blue;
-  height: 37px;
   cursor: pointer;
-  text-decoration: none;
+  line-height: 0;
+  border-radius: 2px;
   &:hover {
-    background-color: gray;
+    color: #90ee90;
   }
-  background-color: white;
 `;
 
-export const BtnDel = styled.a`
+export const BtnDel = styled.button`
+  background: transparent;
+  border: 0;
   color: blue;
-  height: 37px;
   cursor: pointer;
-  text-decoration: none;
+  line-height: 0;
+  border-radius: 2px;
   &:hover {
-    background-color: gray;
+    color: #F75A68;
   }
-  background-color: white;
+
+  
 `;

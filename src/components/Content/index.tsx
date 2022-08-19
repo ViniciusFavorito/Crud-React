@@ -12,6 +12,8 @@ import {
   DivContentClients,
   DivContentCol,
   DivContentColClients,
+  LinkDel,
+  LinkEdit,
 } from "./style";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BiPencil } from "react-icons/bi";
@@ -43,12 +45,16 @@ export function ClientList() {
           <DivColTel>62 3324-8442</DivColTel>
           <DivColCel>62 99472-9104</DivColCel>
           <DivColOpc>
-            <BtnEdit>
-              <BiPencil size={38} />
-            </BtnEdit>
-            <BtnDel>
-              <BsFillPersonXFill size={38} />
-            </BtnDel>
+            <LinkEdit>
+              <BtnEdit>
+                <BiPencil size={30} />
+              </BtnEdit>
+            </LinkEdit>
+            <LinkDel>
+              <BtnDel>
+                <BsFillPersonXFill size={30} />
+              </BtnDel>
+            </LinkDel>
           </DivColOpc>
         </DivContentColClients>
       </DivContentClients>

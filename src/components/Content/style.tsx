@@ -27,7 +27,7 @@ export const DivColId = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: ${(props) => props.theme.palette.common.blue};
 `;
 
 export const DivColName = styled.div`
@@ -35,7 +35,7 @@ export const DivColName = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 export const DivColCPF = styled.div`
@@ -43,7 +43,7 @@ export const DivColCPF = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 export const DivColEmail = styled.div`
@@ -51,7 +51,7 @@ export const DivColEmail = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 export const DivColTel = styled.div`
@@ -59,7 +59,7 @@ export const DivColTel = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 export const DivColCel = styled.div`
@@ -67,7 +67,7 @@ export const DivColCel = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 export const DivColOpc = styled.div`
@@ -75,7 +75,7 @@ export const DivColOpc = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #4682B4;
+  color: #4682b4;
 `;
 
 export const DivCenterContent = styled.div`
@@ -91,6 +91,7 @@ export const DivContentClients = styled.div`
   padding-left: 50px;
   padding-right: 50px;
   background-color: white;
+  color: black;
 `;
 
 export const DivContentColClients = styled.div`
@@ -99,14 +100,11 @@ export const DivContentColClients = styled.div`
   width: 100%;
   border-bottom: solid gray;
   flex-direction: row;
+  color: black;
 `;
 
-export const LinkEdit = styled.a`
-  
-`
-export const LinkDel = styled.a`
-  
-`
+export const LinkEdit = styled.a``;
+export const LinkDel = styled.a``;
 
 export const BtnEdit = styled.button`
   background: transparent;
@@ -128,8 +126,6 @@ export const BtnDel = styled.button`
   line-height: 0;
   border-radius: 2px;
   &:hover {
-    color: #F75A68;
+    color: #f75a68;
   }
-
-  
 `;

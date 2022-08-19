@@ -10,6 +10,14 @@ export type TClient = {
   resp_comp: string;
   resp_cpf: string;
   resp_endereco: string;
+  resp_bairro: string;
   resp_pes: string;
   resp_tel: string;
+  resp_cel: string;
+  resp_email: string;
+  resp_city: string;
+  resp_uf: string;
+  resp_numero: string;
+  activeClient: boolean;
+  resp_obs: string;
 };

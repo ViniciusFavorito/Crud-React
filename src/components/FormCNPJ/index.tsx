@@ -28,9 +28,9 @@ import {
   DivTextAreaAlign,
 } from "./style";
 import clientService from "../../services/client";
+import { TClient } from "../../types/client";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCallback, useEffect } from "react";
-import { TClient } from "../../types/client";
 import { toast } from "react-toastify";
 
 export function FormCnpj() {
@@ -42,7 +42,7 @@ export function FormCnpj() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<TClient>();
 
   const handleSearchForClient = useCallback(
     async (clientId: number) => {

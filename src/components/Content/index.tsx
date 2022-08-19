@@ -67,7 +67,7 @@ export function ClientList() {
         <DivContentCol>
           <DivColId>ID</DivColId>
           <DivColName>
-            Nome/Raz√£o Social
+            Nome/Raz„o Social
             <AiOutlineArrowUp />
           </DivColName>
           <DivColCPF>CPF/CNPJ</DivColCPF>
@@ -85,8 +85,9 @@ export function ClientList() {
                 <DivColId>{client.id}</DivColId>
                 <DivColName>{client.Fantasia}</DivColName>
                 <DivColCPF>{client.CNPJ}</DivColCPF>
+                <DivColEmail>{client.email}</DivColEmail>
                 <DivColTel>{client.resp_tel}</DivColTel>
-                <DivColCel>{client.resp_tel}</DivColCel>
+                <DivColCel>{client.resp_cel}</DivColCel>
                 <DivColOpc>
                   <LinkEdit href={`/client?id=${client.id}`}>
                     <BtnEdit>

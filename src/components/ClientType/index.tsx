@@ -1,8 +1,9 @@
-import { DivClientType, DivLabel, DivTypes, RadioButton } from "./style";
+import { DivClientType, DivLabel, DivTypes, LabelRegister, RadioButton } from "./style";
 
 export function ClientType() {
   return (
     <DivClientType>
+      <LabelRegister>Adicionar Novo Cliente</LabelRegister>
       Tipo
       <DivTypes>
         <RadioButton type="radio" name="radio" value="cnpj" checked />

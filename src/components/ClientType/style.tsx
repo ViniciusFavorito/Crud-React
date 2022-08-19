@@ -2,16 +2,22 @@ import styled from "styled-components";
 
 export const DivClientType = styled.div`
   width: 100%;
-  height: 60px;
+  height: 7.75rem;
   padding-left: 50px;
   font-weight: bold;
+`;
+
+export const LabelRegister = styled.div`
+  color: #1E90FF;
+  margin: 3rem auto 3rem;
+  font-size: 20px;
 `;
 
 export const DivTypes = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 `;
 
 export const RadioButton = styled.input`

@@ -7,7 +7,7 @@ const Routes = () => {
     <RoutesCustom>
       <Route path="/" element={<CadastroLista />} />
       <Route path="" element={<CadastroLista />} />
-      <Route path="/new" element={<CadastroCliente />} />
+      <Route path="/client" element={<CadastroCliente />} />
     </RoutesCustom>
   );
 };

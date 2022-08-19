@@ -18,58 +18,51 @@ import {
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BiPencil } from "react-icons/bi";
 import { BsFillPersonXFill } from "react-icons/bs";
-import { useEffect, useState } from "react";
-import api from "../../services/api";
-
-// export interface IClients {
-//   cnpj: string;
-//   fantasia: string;
-//   razao: string;
-//   activeClient: boolean;
-//   email: string;
-//   estadual: string;
-//   municipal: string;
-//   resp_bairro: string;
-//   resp_cep: string;
-//   resp_city: string;
-//   resp_comp: string;
-//   resp_cpf: string;
-//   resp_email: string;
-//   resp_endereco: string;
-//   resp_numero: string;
-//   resp_obs: string;
-//   resp_pes: string;
-//   resp_tel: string;
-//   resp_uf: string;
-//   i: number;
-// }
+import { useCallback, useEffect, useState } from "react";
+import { TClient } from "../../types/client";
+import clientService from "../../services/client";
+import { toast } from "react-toastify";
+import { SearchClient } from "../SearchCliente";
+import useDebounce from "../../hooks/useDebounce";
 
 export function ClientList() {
-  const [clients, setClients] = useState([]);
+  const [clients, setClients] = useState<TClient[]>([]);
+  const [filterSearch, setFilterSearch] = useState<string>();
+
+  const debouncedFilterSearch = useDebounce(filterSearch ?? "", 500);
+
+  const fetchClients = useCallback(async (search?: string) => {
+    const clients = await clientService.getClients(search);
+    setClients(clients);
+  }, []);
+
+  const deleteClient = async (clientId: number) => {
+    try {
+      await clientService.deleteClient(clientId);
+      setClients((clients) =>
+        clients.filter((client) => client.id !== clientId)
+      );
+      toast.success("Cliente deletado com sucesso!");
+    } catch (e) {
+      toast.error("Não foi possível excluir o cliente, tente novamente!");
+    }
+  };
 
   useEffect(() => {
-    api
-      .get("http://localhost:3000/clients")
-      .then((response) => setClients(response.data))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-      });
-  }, []);
-  console.log(clients);
-
-  function deleteClient(clientId: number) {
-    api
-      .delete("http://localhost:3000/clients/" + clientId)
-      .then((response) => alert("Cliente Excluido com sucesso!"));
-    setClients(
-      clients.filter((clients) => {
-        return clients.id !== clientId;
-      })
+    fetchClients(
+      debouncedFilterSearch && debouncedFilterSearch.length
+        ? debouncedFilterSearch
+        : undefined
     );
-  }
+  }, [debouncedFilterSearch]);
 
   return (
     <>
+      <SearchClient
+        onChange={({ target }: { target: { value: string } }) =>
+          setFilterSearch(target.value)
+        }
+      />
       <DivContent>
         <DivContentCol>
           <DivColId>ID</DivColId>
@@ -86,23 +79,22 @@ export function ClientList() {
       </DivContent>
       {clients.length > 0 ? (
         <>
-          {clients.map((key: number, i: number) => (
-            <DivContentClients key={clients[i].id}>
+          {clients.map((client) => (
+            <DivContentClients key={client.id}>
               <DivContentColClients>
-                <DivColId>{clients[i].id}</DivColId>
-                <DivColName>{clients[i].Fantasia}</DivColName>
-                <DivColCPF>{clients[i].cnpj}</DivColCPF>
-                <DivColEmail>{clients[i].email}</DivColEmail>
-                <DivColTel>{clients[i].resp_tel}</DivColTel>
-                <DivColCel>{clients[i].resp_cel}</DivColCel>
+                <DivColId>{client.id}</DivColId>
+                <DivColName>{client.Fantasia}</DivColName>
+                <DivColCPF>{client.CNPJ}</DivColCPF>
+                <DivColTel>{client.resp_tel}</DivColTel>
+                <DivColCel>{client.resp_tel}</DivColCel>
                 <DivColOpc>
-                  <LinkEdit href="/new">
+                  <LinkEdit href={`/client?id=${client.id}`}>
                     <BtnEdit>
                       <BiPencil size={30} />
                     </BtnEdit>
                   </LinkEdit>
                   <LinkDel>
-                    <BtnDel onClick={() => deleteClient(clients[i].id)}>
+                    <BtnDel onClick={() => deleteClient(client.id)}>
                       <BsFillPersonXFill size={30} />
                     </BtnDel>
                   </LinkDel>

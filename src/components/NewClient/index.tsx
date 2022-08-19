@@ -10,7 +10,7 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 export function NewClient() {
   return (
     <DivBtn>
-      <BtnNewClient href="/new">
+      <BtnNewClient href="/client">
         <DivBtnContent>
           <AiOutlinePlusCircle size={40} color={"white"} />
           <BtnName>

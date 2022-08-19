@@ -1,7 +1,6 @@
 import { RadioButton } from "../ClientType/style";
 import { useForm } from "react-hook-form";
-import api from "../../services/api";
-import { VscError } from "react-icons/vsc";
+import { VscError, VscReplace } from "react-icons/vsc";
 import {
   CheckAtivo,
   CpfCnpj,
@@ -28,21 +27,60 @@ import {
   DivCancel,
   DivTextAreaAlign,
 } from "./style";
+import clientService from "../../services/client";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useCallback, useEffect } from "react";
+import { TClient } from "../../types/client";
+import { toast } from "react-toastify";
 
 export function FormCnpj() {
+  const { search } = useLocation();
+  const navigate = useNavigate();
+  const clientId = new URLSearchParams(search).get("id");
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
-  console.log(errors);
-  function onSubmit(userData: any) {
-    api
-      .post("http://localhost:3000/clients", userData)
-      .then((response) => console.log("Deu certo"));
 
-    console.log(userData);
+  const handleSearchForClient = useCallback(
+    async (clientId: number) => {
+      try {
+        const client = await clientService.getClient(clientId);
+        reset(client);
+      } catch {
+        toast.error("Não foi possível achar este cliente!");
+      }
+    },
+    [reset]
+  );
+
+  useEffect(() => {
+    if (clientId && Number(clientId)) {
+      handleSearchForClient(Number(clientId));
+    }
+  }, [clientId, handleSearchForClient]);
+
+  async function onSubmit(userData: TClient) {
+    if (clientId) {
+      try {
+        await clientService.updateClient(userData);
+        toast.success("Cliente atualizado com sucesso!");
+      } catch {
+        toast.error(
+          "Não foi possível alterar as informações do cliente, entre em contato com suporte."
+        );
+      }
+    } else {
+      try {
+        await clientService.createClient(userData);
+        toast.success("Cliente cadastrado com sucesso!");
+      } catch {
+        toast.error("Não foi possível criar o cliente");
+      }
+    }
+    navigate("/");
   }
 
   return (
@@ -50,7 +88,7 @@ export function FormCnpj() {
       <FormularioCnpj onSubmit={handleSubmit(onSubmit)}>
         <DivFlex>
           <DivWriteInput>
-            RazÃ£o Social
+            Razão Social
             <DivWriteError>
               <InputWrite
                 {...register("Razao", { required: true })}
@@ -126,10 +164,7 @@ export function FormCnpj() {
             </DivWriteInput>
             <DivWriteInput>
               Data Nasc. ResponsÃ¡vel
-              <InputWrite
-                type={"date"}
-                {...register("resp_email")}
-              ></InputWrite>
+              <InputWrite type={"date"}></InputWrite>
             </DivWriteInput>
           </DivFlex>
           <DivFlex>

@@ -126,7 +126,10 @@ export function FormCnpj() {
             </DivWriteInput>
             <DivWriteInput>
               Data Nasc. Responsável
-              <InputWrite {...register("resp_email")}></InputWrite>
+              <InputWrite
+                type={"date"}
+                {...register("resp_email")}
+              ></InputWrite>
             </DivWriteInput>
           </DivFlex>
           <DivFlex>

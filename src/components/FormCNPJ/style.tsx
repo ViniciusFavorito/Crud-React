@@ -18,7 +18,7 @@ export const DivWriteInput = styled.div`
   height: 30px;
   padding-left: 50px;
   margin-right: 50px;
-  margin-top: 10px;
+  margin-top: 3rem;
 `;
 
 export const CpfCnpj = styled.div`
@@ -31,8 +31,9 @@ export const CpfCnpj = styled.div`
 export const InputWrite = styled.input`
   display: flex;
   width: 100%;
-  height: 35px;
-  border-radius: 0.9rem;
+  height: 2.5rem;
+  border-radius: 15px;
+  border: solid #c4c4cc 2px;
 `;
 
 export const DivTextArea = styled.div`
@@ -46,6 +47,14 @@ export const InputWriteTextArea = styled.textarea`
   width: 100%;
   height: 150px;
   border-radius: 0.9rem;
+`;
+
+export const DivTextAreaAlign = styled.div`
+  width: 97%;
+  height: 30px;
+  padding-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
 `;
 
 export const DivCheck = styled.div`

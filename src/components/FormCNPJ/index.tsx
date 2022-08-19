@@ -26,6 +26,7 @@ import {
   BtnSave,
   DivWriteError,
   DivCancel,
+  DivTextAreaAlign,
 } from "./style";
 
 export function FormCnpj() {
@@ -74,6 +75,7 @@ export function FormCnpj() {
             </DivCheckGeral>
             <DivLabelAtivo>Ativo</DivLabelAtivo>
           </DivCheck>
+          <DivFlex></DivFlex>
         </DivFlex>
         <DivFlex>
           <CpfCnpj>
@@ -180,12 +182,12 @@ export function FormCnpj() {
             </DivWriteInput>
           </DivFlex>
           <DivTextArea>
-            <DivWriteInput>
+            <DivTextAreaAlign>
               Observação
               <InputWriteTextArea
                 {...register("resp_obs")}
               ></InputWriteTextArea>
-            </DivWriteInput>
+            </DivTextAreaAlign>
           </DivTextArea>
           <DivOptions>
             <DivSave>

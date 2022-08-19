@@ -1,14 +1,14 @@
-import { DivClientType, DivTypes, RadioButton } from "./style";
+import { DivClientType, DivLabel, DivTypes, RadioButton } from "./style";
 
 export function ClientType() {
   return (
     <DivClientType>
       Tipo
       <DivTypes>
-        <RadioButton type="radio" name="radio" value="cnpj" />
-        <div>Pessoa Jurídica</div>
+        <RadioButton type="radio" name="radio" value="cnpj" checked />
+        <DivLabel>Pessoa Jurídica</DivLabel>
         <RadioButton type="radio" name="radio" value="cpf" />
-        <div>Pessoa Física</div>
+        <DivLabel>Pessoa Física</DivLabel>
       </DivTypes>
     </DivClientType>
   );

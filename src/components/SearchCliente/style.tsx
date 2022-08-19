@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const DivInput = styled.div`
   display: flex;
   width: 30%;
-  height: 35px;
-  border: solid;
-  border-radius: 1rem;
+  height: 2.5rem;
   border-color: gray;
   background-color: white;
   margin-left: auto;
+  border-radius: 15px;
+  border: solid #c4c4cc 3px;
+  margin-right: 2rem;
 `;
 
 export const InputWrite = styled.input`

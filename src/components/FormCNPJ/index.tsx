@@ -206,6 +206,3 @@ export function FormCnpj() {
     </DivForm>
   );
 }
-function baseURL(baseURL: any, arg1: string) {
-  throw new Error("Function not implemented.");
-}

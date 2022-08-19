@@ -57,6 +57,17 @@ export function ClientList() {
   }, []);
   console.log(clients);
 
+  function deleteClient(clientId: number) {
+    api
+      .delete("http://localhost:3000/clients/" + clientId)
+      .then((response) => alert("Cliente Excluido com sucesso!"));
+    setClients(
+      clients.filter((clients) => {
+        return clients.id !== clientId;
+      })
+    );
+  }
+
   return (
     <>
       <DivContent>
@@ -85,13 +96,13 @@ export function ClientList() {
                 <DivColTel>{clients[index].resp_tel}</DivColTel>
                 <DivColCel>{clients[index].resp_cel}</DivColCel>
                 <DivColOpc>
-                  <LinkEdit>
+                  <LinkEdit href="/new">
                     <BtnEdit>
                       <BiPencil size={30} />
                     </BtnEdit>
                   </LinkEdit>
                   <LinkDel>
-                    <BtnDel>
+                    <BtnDel onClick={() => deleteClient(clients[index].id)}>
                       <BsFillPersonXFill size={30} />
                     </BtnDel>
                   </LinkDel>

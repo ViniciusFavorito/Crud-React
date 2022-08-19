@@ -1,21 +1,6 @@
 {
   "clients": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "macaco-server",
-      "author": "Nelson"
-    },
-    {
-      "title": "teste do put",
-      "author": "nelsin do teste",
-      "id": 3
-    },
-    {
       "Razao": "camaco louco",
       "Fantasia": "camaco louco",
       "CNPJ": "camaco louco",

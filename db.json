@@ -66,6 +66,28 @@
       "resp_bairro": "",
       "resp_obs": "",
       "id": 6
+    },
+    {
+      "Razao": "Inserindo clientes",
+      "Fantasia": "Inserindo clientes",
+      "activeClient": false,
+      "CNPJ": "1321312321312321",
+      "estadual": "Inserindo clientes",
+      "municipal": "Inserindo clientes",
+      "email": "Inserindo clientes",
+      "resp_pes": "Inserindo clientes",
+      "resp_cpf": "Inserindo clientes",
+      "resp_email": "Inserindo clientes",
+      "resp_tel": "Inserindo clientes",
+      "resp_cep": "Inserindo clientes",
+      "resp_city": "Inserindo clientes",
+      "resp_uf": "Inserindo clientes",
+      "resp_endereco": "Inserindo clientes",
+      "resp_numero": "Inserindo clientes",
+      "resp_comp": "Inserindo clientes",
+      "resp_bairro": "Inserindo clientes",
+      "resp_obs": "Inserindo clientes",
+      "id": 7
     }
   ]
 }

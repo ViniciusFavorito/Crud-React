@@ -67,7 +67,7 @@ export function ClientList() {
         <DivContentCol>
           <DivColId>ID</DivColId>
           <DivColName>
-            Nome/Razão Social
+            Nome/Razao Social
             <AiOutlineArrowUp />
           </DivColName>
           <DivColCPF>CPF/CNPJ</DivColCPF>

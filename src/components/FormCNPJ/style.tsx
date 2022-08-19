@@ -1,0 +1,154 @@
+import styled from "styled-components";
+
+export const DivForm = styled.div`
+  width: 100%;
+  height: auto;
+`;
+
+export const FormularioCnpj = styled.form``;
+
+export const DivFlex = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const DivWriteInput = styled.div`
+  width: 40%;
+  height: 30px;
+  padding-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+`;
+
+export const CpfCnpj = styled.div`
+  width: 40%;
+  height: 30px;
+  padding-left: 50px;
+  margin-right: 50px;
+`;
+
+export const InputWrite = styled.input`
+  display: flex;
+  width: 100%;
+  height: 35px;
+  border-radius: 0.9rem;
+`;
+
+export const DivTextArea = styled.div`
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+`;
+
+export const InputWriteTextArea = styled.textarea`
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border-radius: 0.9rem;
+`;
+
+export const DivCheck = styled.div`
+  width: 100%;
+  justify-content: center;
+  display: flex;
+`;
+
+export const DivCheckGeral = styled.div`
+  width: auto;
+  margin-left: 20px;
+  display: flex;
+`;
+
+export const CheckAtivo = styled.input`
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 20px;
+`;
+
+export const DivLabelAtivo = styled.div`
+  width: 100%;
+  margin-top: 1.6rem;
+  margin-left: 5px;
+  height: 20px;
+`;
+
+export const DivContribuintePai = styled.div`
+  width: 100%;
+`;
+
+export const DivContribuinte = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
+export const DivLabelContribuinte = styled.div`
+  width: auto;
+  margin-top: 10px;
+  padding-right: 20px;
+`;
+
+export const DivResp = styled.div`
+  width: 100%;
+  margin-top: 100px;
+  height: auto;
+`;
+
+export const DivOptions = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  margin-bottom: 100px;
+  display: flex;
+`;
+
+export const DivSave = styled.div`
+  width: 100%;
+  margin-left: auto;
+  background-color: green;
+`;
+
+export const DivCancel = styled.div`
+  width: 100%;
+  background-color: yellow;
+`;
+
+export const DivAlign = styled.div`
+  display: flex;
+  margin-top: 30px;
+  height: 40px;
+  background-color: blue;
+  justify-content: end;
+  align-content: center;
+`;
+
+export const DivBtnSaveAlign = styled.div`
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-left: 80%;
+  background-color: brown;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 20%;
+  cursor: pointer;
+`;
+
+export const BtnSubmitForm = styled.button`
+  width: 50%;
+`;
+
+export const BtnCancelButton = styled.a`
+  width: 50%;
+  text-decoration: none;
+`;
+
+export const SpanError = styled.span`
+  color: red;
+  margin-top: 50px;
+`;
+
+export const DivWriteError = styled.div`
+  display: flex;
+  width: 100%;
+`;

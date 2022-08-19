@@ -1,0 +1,71 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "macaco-server",
+      "author": "Nelson"
+    },
+    {
+      "title": "teste do put",
+      "author": "nelsin do teste",
+      "id": 3
+    },
+    {
+      "Razao": "camaco louco",
+      "Fantasia": "camaco louco",
+      "CNPJ": "camaco louco",
+      "estadual": "camaco louco",
+      "municipal": "",
+      "email": "camaco louco",
+      "resp_pes": "",
+      "resp_cpf": "",
+      "resp_tel": "",
+      "resp_cep": "",
+      "resp_endereco": "",
+      "resp_comp": "",
+      "id": 4
+    },
+    {
+      "Razao": "camaco louco",
+      "Fantasia": "camaco louco",
+      "CNPJ": "camaco louco",
+      "estadual": "camaco louco",
+      "municipal": "",
+      "email": "camaco louco",
+      "resp_pes": "",
+      "resp_cpf": "",
+      "resp_tel": "",
+      "resp_cep": "",
+      "resp_endereco": "",
+      "resp_comp": "",
+      "id": 5
+    },
+    {
+      "Razao": "Vinicius",
+      "Fantasia": "Faoviroto",
+      "activeClient": false,
+      "CNPJ": "asdsadsa",
+      "estadual": "",
+      "municipal": "",
+      "email": "tchucubira@gmail.com",
+      "resp_pes": "nelson",
+      "resp_cpf": "0444",
+      "resp_email": "",
+      "resp_tel": "21983721987",
+      "resp_cep": "",
+      "resp_city": "",
+      "resp_uf": "",
+      "resp_endereco": "",
+      "resp_numero": "",
+      "resp_comp": "",
+      "resp_bairro": "",
+      "resp_obs": "",
+      "id": 6
+    }
+  ]
+}

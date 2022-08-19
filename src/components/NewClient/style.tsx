@@ -20,7 +20,7 @@ export const BtnNewClient = styled.a`
   margin-left: 50px;
   text-decoration: none;
   &:hover {
-    background-color: #a2a2a2;
+    background-color: #1E90FF;
   }
 `;
 

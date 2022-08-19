@@ -18,6 +18,8 @@ export const DivContentCol = styled.div`
   border-left: none;
   border-right: none;
   flex-direction: row;
+  font-weight: bold;
+  font-size: 1.125rem;
 `;
 
 export const DivColId = styled.div`
@@ -25,7 +27,7 @@ export const DivColId = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColName = styled.div`
@@ -33,7 +35,7 @@ export const DivColName = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColCPF = styled.div`
@@ -41,7 +43,7 @@ export const DivColCPF = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColEmail = styled.div`
@@ -49,7 +51,7 @@ export const DivColEmail = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColTel = styled.div`
@@ -57,7 +59,7 @@ export const DivColTel = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColCel = styled.div`
@@ -65,7 +67,7 @@ export const DivColCel = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #1E90FF;
 `;
 
 export const DivColOpc = styled.div`
@@ -73,7 +75,7 @@ export const DivColOpc = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: blue;
+  color: #4682B4;
 `;
 
 export const DivCenterContent = styled.div`

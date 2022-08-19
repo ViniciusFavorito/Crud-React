@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const DivForm = styled.div`
   width: 100%;
   height: auto;
-  font-weight: bold; 
+  font-weight: bold;
 `;
 
 export const FormularioCnpj = styled.form``;
 
 export const DivFlex = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  margin-top: 30px;
 `;
 
 export const DivWriteInput = styled.div`
@@ -18,7 +18,7 @@ export const DivWriteInput = styled.div`
   height: 30px;
   padding-left: 50px;
   margin-right: 50px;
-  margin-top: 3rem;
+  margin-top: 10px;
 `;
 
 export const CpfCnpj = styled.div`
@@ -117,7 +117,6 @@ export const DivSave = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  
 `;
 
 export const BtnCancel = styled.a`
@@ -125,7 +124,7 @@ export const BtnCancel = styled.a`
   width: 100%;
   height: 2.5rem;
   margin-right: 80%;
-  background-color: #DC143C;
+  background-color: #dc143c;
   align-items: center;
   justify-content: center;
   margin-left: 1.25rem;
@@ -149,7 +148,7 @@ export const BtnSave = styled.button`
   width: 100%;
   height: 2.5rem;
   margin-left: 80%;
-  background-color: #20B2AA;
+  background-color: #20b2aa;
   align-items: center;
   justify-content: center;
   margin-right: 1.25rem;
@@ -157,7 +156,7 @@ export const BtnSave = styled.button`
   cursor: pointer;
   font-size: 1rem;
   color: white;
-  font-weight: bold; 
+  font-weight: bold;
 `;
 
 export const DivCancel = styled.div`
@@ -174,4 +173,3 @@ export const DivWriteError = styled.div`
   display: flex;
   width: 100%;
 `;
-

@@ -21,13 +21,11 @@ import {
   DivTextArea,
   DivOptions,
   DivSave,
-  DivCancel,
+  BtnCancel,
   DivAlign,
-  DivBtnSaveAlign,
-  BtnSubmitForm,
-  BtnCancelButton,
-  SpanError,
+  BtnSave,
   DivWriteError,
+  DivCancel,
 } from "./style";
 
 export function FormCnpj() {
@@ -190,16 +188,16 @@ export function FormCnpj() {
             </DivWriteInput>
           </DivTextArea>
           <DivOptions>
-            <BtnSubmitForm type="submit">
-              <DivSave>
-                <DivAlign>
-                  <DivBtnSaveAlign>Salvar</DivBtnSaveAlign>
-                </DivAlign>
-              </DivSave>
-            </BtnSubmitForm>
-            <BtnCancelButton href="/">
-              <DivCancel>Cancelar</DivCancel>
-            </BtnCancelButton>
+            <DivSave>
+              <DivAlign>
+                <BtnSave type="submit">Salvar</BtnSave>
+              </DivAlign>
+            </DivSave>
+            <DivCancel>
+              <DivAlign>
+                <BtnCancel href="/">Cancelar</BtnCancel>
+              </DivAlign>
+            </DivCancel>
           </DivOptions>
         </DivResp>
       </FormularioCnpj>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const DivForm = styled.div`
   width: 100%;
   height: auto;
+  font-weight: bold; 
 `;
 
 export const FormularioCnpj = styled.form``;
@@ -95,50 +96,62 @@ export const DivResp = styled.div`
 
 export const DivOptions = styled.div`
   width: 100%;
-  height: 100px;
-  background-color: red;
-  margin-bottom: 100px;
+  height: 7rem;
+  background-color: #e1e1e6;
+  margin-bottom: 0;
   display: flex;
 `;
 
 export const DivSave = styled.div`
-  width: 100%;
+  width: 50%;
   margin-left: auto;
-  background-color: green;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
 `;
 
-export const DivCancel = styled.div`
+export const BtnCancel = styled.a`
+  display: flex;
   width: 100%;
-  background-color: yellow;
+  height: 2.5rem;
+  margin-right: 80%;
+  background-color: #DC143C;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.25rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
 `;
 
 export const DivAlign = styled.div`
   display: flex;
   margin-top: 30px;
   height: 40px;
-  background-color: blue;
   justify-content: end;
   align-content: center;
 `;
 
-export const DivBtnSaveAlign = styled.div`
+export const BtnSave = styled.button`
   display: flex;
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   margin-left: 80%;
-  background-color: brown;
+  background-color: #20B2AA;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
-  border-radius: 20%;
+  margin-right: 1.25rem;
+  border-radius: 7px;
   cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold; 
 `;
 
-export const BtnSubmitForm = styled.button`
-  width: 50%;
-`;
-
-export const BtnCancelButton = styled.a`
+export const DivCancel = styled.div`
   width: 50%;
   text-decoration: none;
 `;
@@ -152,3 +165,4 @@ export const DivWriteError = styled.div`
   display: flex;
   width: 100%;
 `;
+

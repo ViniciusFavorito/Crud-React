@@ -41,7 +41,7 @@ import api from "../../services/api";
 //   resp_pes: string;
 //   resp_tel: string;
 //   resp_uf: string;
-//   index: number;
+//   i: number;
 // }
 
 export function ClientList() {
@@ -86,15 +86,15 @@ export function ClientList() {
       </DivContent>
       {clients.length > 0 ? (
         <>
-          {clients.map((key: number, index: number) => (
-            <DivContentClients key={clients[index].id}>
+          {clients.map((key: number, i: number) => (
+            <DivContentClients key={clients[i].id}>
               <DivContentColClients>
-                <DivColId>{clients[index].id}</DivColId>
-                <DivColName>{clients[index].Fantasia}</DivColName>
-                <DivColCPF>{clients[index].cnpj}</DivColCPF>
-                <DivColEmail>{clients[index].email}</DivColEmail>
-                <DivColTel>{clients[index].resp_tel}</DivColTel>
-                <DivColCel>{clients[index].resp_cel}</DivColCel>
+                <DivColId>{clients[i].id}</DivColId>
+                <DivColName>{clients[i].Fantasia}</DivColName>
+                <DivColCPF>{clients[i].cnpj}</DivColCPF>
+                <DivColEmail>{clients[i].email}</DivColEmail>
+                <DivColTel>{clients[i].resp_tel}</DivColTel>
+                <DivColCel>{clients[i].resp_cel}</DivColCel>
                 <DivColOpc>
                   <LinkEdit href="/new">
                     <BtnEdit>
@@ -102,7 +102,7 @@ export function ClientList() {
                     </BtnEdit>
                   </LinkEdit>
                   <LinkDel>
-                    <BtnDel onClick={() => deleteClient(clients[index].id)}>
+                    <BtnDel onClick={() => deleteClient(clients[i].id)}>
                       <BsFillPersonXFill size={30} />
                     </BtnDel>
                   </LinkDel>

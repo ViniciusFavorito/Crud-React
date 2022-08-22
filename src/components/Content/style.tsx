@@ -30,12 +30,30 @@ export const DivColId = styled.div`
   color: ${(props) => props.theme.palette.common.blue};
 `;
 
+export const DivColIdContent = styled.div`
+  width: 8%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: black;
+  font-weight: bold;
+  /* color: ${(props) => props.theme.palette.common.blue}; */
+`;
+
 export const DivColName = styled.div`
   width: 25%;
   justify-content: center;
   align-items: center;
   margin: auto;
   color: #1e90ff;
+`;
+
+export const DivColNameContent = styled.div`
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: bold;
 `;
 
 export const DivColCPF = styled.div`
@@ -46,12 +64,30 @@ export const DivColCPF = styled.div`
   color: #1e90ff;
 `;
 
+export const DivColCPFContent = styled.div`
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: black;
+  font-weight: bold;
+`;
+
 export const DivColEmail = styled.div`
   width: 20%;
   justify-content: center;
   align-items: center;
   margin: auto;
   color: #1e90ff;
+`;
+
+export const DivColEmailContent = styled.div`
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: black;
+  font-weight: bold;
 `;
 
 export const DivColTel = styled.div`
@@ -62,12 +98,30 @@ export const DivColTel = styled.div`
   color: #1e90ff;
 `;
 
+export const DivColTelContent = styled.div`
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: black;
+  font-weight: bold;
+`;
+
 export const DivColCel = styled.div`
   width: 20%;
   justify-content: center;
   align-items: center;
   margin: auto;
   color: #1e90ff;
+`;
+
+export const DivColCelContent = styled.div`
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: black;
+  font-weight: bold;
 `;
 
 export const DivColOpc = styled.div`
@@ -92,6 +146,7 @@ export const DivContentClients = styled.div`
   padding-right: 50px;
   background-color: white;
   color: black;
+  font-weight: bold;
 `;
 
 export const DivContentColClients = styled.div`
@@ -101,6 +156,7 @@ export const DivContentColClients = styled.div`
   border-bottom: solid gray;
   flex-direction: row;
   color: black;
+  font-weight: bold;
 `;
 
 export const LinkEdit = styled.a``;
@@ -114,18 +170,18 @@ export const BtnEdit = styled.button`
   line-height: 0;
   border-radius: 2px;
   &:hover {
-    color: #90ee90;
+    color: #ababf4;
   }
 `;
 
 export const BtnDel = styled.button`
   background: transparent;
   border: 0;
-  color: blue;
+  color: red;
   cursor: pointer;
   line-height: 0;
   border-radius: 2px;
   &:hover {
-    color: #f75a68;
+    color: #db7f86;
   }
 `;

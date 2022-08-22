@@ -2,12 +2,18 @@ import {
   BtnDel,
   BtnEdit,
   DivColCel,
+  DivColCelContent,
   DivColCPF,
+  DivColCPFContent,
   DivColEmail,
+  DivColEmailContent,
   DivColId,
+  DivColIdContent,
   DivColName,
+  DivColNameContent,
   DivColOpc,
   DivColTel,
+  DivColTelContent,
   DivContent,
   DivContentClients,
   DivContentCol,
@@ -44,7 +50,7 @@ export function ClientList() {
       );
       toast.success("Cliente deletado com sucesso!");
     } catch (e) {
-      toast.error("NÃ£o foi possÃ­vel excluir o cliente, tente novamente!");
+      toast.error("Não foi possí­vel excluir o cliente, tente novamente!");
     }
   };
 
@@ -82,12 +88,12 @@ export function ClientList() {
           {clients.map((client) => (
             <DivContentClients key={client.id}>
               <DivContentColClients>
-                <DivColId>{client.id}</DivColId>
-                <DivColName>{client.Fantasia}</DivColName>
-                <DivColCPF>{client.CNPJ}</DivColCPF>
-                <DivColEmail>{client.email}</DivColEmail>
-                <DivColTel>{client.resp_tel}</DivColTel>
-                <DivColCel>{client.resp_cel}</DivColCel>
+                <DivColIdContent>{client.id}</DivColIdContent>
+                <DivColNameContent>{client.Fantasia}</DivColNameContent>
+                <DivColCPFContent>{client.CNPJ}</DivColCPFContent>
+                <DivColEmailContent>{client.email}</DivColEmailContent>
+                <DivColTelContent>{client.resp_tel}</DivColTelContent>
+                <DivColCelContent>{client.resp_cel}</DivColCelContent>
                 <DivColOpc>
                   <LinkEdit href={`/client?id=${client.id}`}>
                     <BtnEdit>

@@ -173,3 +173,7 @@ export const DivWriteError = styled.div`
   display: flex;
   width: 100%;
 `;
+
+export const SpanNone = styled.span`
+  display: none;
+`;

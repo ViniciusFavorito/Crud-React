@@ -26,6 +26,7 @@ import {
   DivWriteError,
   DivCancel,
   DivTextAreaAlign,
+  SpanNone,
 } from "./style";
 import clientService from "../../services/client";
 import { TClient } from "../../types/client";
@@ -50,7 +51,7 @@ export function FormCnpj() {
         const client = await clientService.getClient(clientId);
         reset(client);
       } catch {
-        toast.error("N�o foi poss�vel achar este cliente!");
+        toast.error("Não foi possível achar este cliente!");
       }
     },
     [reset]
@@ -69,7 +70,7 @@ export function FormCnpj() {
         toast.success("Cliente atualizado com sucesso!");
       } catch {
         toast.error(
-          "N�o foi poss�vel alterar as informa��es do cliente, entre em contato com suporte."
+          "Não foi possível alterar as informações do cliente, entre em contato com suporte."
         );
       }
     } else {
@@ -77,7 +78,7 @@ export function FormCnpj() {
         await clientService.createClient(userData);
         toast.success("Cliente cadastrado com sucesso!");
       } catch {
-        toast.error("N�o foi poss�vel criar o cliente");
+        toast.error("Não foi possível criar o cliente");
       }
     }
     navigate("/");
@@ -88,12 +89,15 @@ export function FormCnpj() {
       <FormularioCnpj onSubmit={handleSubmit(onSubmit)}>
         <DivFlex>
           <DivWriteInput>
-            Raz�o Social
+            Razão Social
             <DivWriteError>
               <InputWrite
                 {...register("Razao", { required: true })}
               ></InputWrite>
-              {errors.Razao && <VscError color="red" />}
+              <SpanNone>
+                {errors.Razao &&
+                  toast.error("O campo 'Razão Social' não pode ser vazio.")}
+              </SpanNone>
             </DivWriteError>
           </DivWriteInput>
           <DivWriteInput>
@@ -101,6 +105,10 @@ export function FormCnpj() {
             <InputWrite
               {...register("Fantasia", { required: true })}
             ></InputWrite>
+            <SpanNone>
+              {errors.Fantasia &&
+                toast.error("O campo 'Nome Fantasia' não pode ser vazio.")}
+            </SpanNone>
           </DivWriteInput>
           <DivCheck>
             <DivCheckGeral>
@@ -119,6 +127,10 @@ export function FormCnpj() {
           <CpfCnpj>
             CNPJ/CPF
             <InputWrite {...register("CNPJ", { required: true })}></InputWrite>
+            <SpanNone>
+              {errors.CNPJ &&
+                toast.error("O campo 'Nome CNPJ' não pode ser vazio.")}
+            </SpanNone>
           </CpfCnpj>
           <DivContribuintePai>
             Contribuinte
@@ -144,6 +156,10 @@ export function FormCnpj() {
           <DivWriteInput>
             Email
             <InputWrite {...register("email", { required: true })}></InputWrite>
+            <SpanNone>
+              {errors.email &&
+                toast.error("O campo 'Email' não pode ser vazio.")}
+            </SpanNone>
           </DivWriteInput>
         </DivFlex>
         <DivResp>
@@ -153,6 +169,12 @@ export function FormCnpj() {
               <InputWrite
                 {...register("resp_pes", { required: true })}
               ></InputWrite>
+              <SpanNone>
+                {errors.resp_pes &&
+                  toast.error(
+                    "O campo 'Nome do Responsável' não pode ser vazio."
+                  )}
+              </SpanNone>
             </DivWriteInput>
           </DivFlex>
           <DivFlex>
@@ -161,6 +183,10 @@ export function FormCnpj() {
               <InputWrite
                 {...register("resp_cpf", { required: true })}
               ></InputWrite>
+              <SpanNone>
+                {errors.resp_cpf &&
+                  toast.error("O campo 'Email' não pode ser vazio.")}
+              </SpanNone>
             </DivWriteInput>
             <DivWriteInput>
               Data Nasc. Responsável
@@ -173,12 +199,21 @@ export function FormCnpj() {
               <InputWrite
                 {...register("resp_tel", { required: true })}
               ></InputWrite>
+              <SpanNone>
+                {errors.resp_tel &&
+                  toast.error("O campo 'Telefone' não pode ser vazio.")}
+              </SpanNone>
+              {errors.resp_tel && console.log("aqui")}
             </DivWriteInput>
             <DivWriteInput>
               Celular
               <InputWrite
                 {...register("resp_tel", { required: true })}
               ></InputWrite>
+              <SpanNone>
+                {errors.resp_tel &&
+                  toast.error("O campo 'Celular' não pode ser vazio.")}
+              </SpanNone>
             </DivWriteInput>
             <DivWriteInput>
               Email Responsável

@@ -203,7 +203,6 @@ export function FormCnpj() {
                 {errors.resp_tel &&
                   toast.error("O campo 'Telefone' não pode ser vazio.")}
               </SpanNone>
-              {errors.resp_tel && console.log("aqui")}
             </DivWriteInput>
             <DivWriteInput>
               Celular
